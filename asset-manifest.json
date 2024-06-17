@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/exchange360/static/css/main.5848fadd.css",
+    "main.js": "/exchange360/static/js/main.0a42d041.js",
+    "static/js/453.640a8f5e.chunk.js": "/exchange360/static/js/453.640a8f5e.chunk.js",
+    "index.html": "/exchange360/index.html",
+    "main.5848fadd.css.map": "/exchange360/static/css/main.5848fadd.css.map",
+    "main.0a42d041.js.map": "/exchange360/static/js/main.0a42d041.js.map",
+    "453.640a8f5e.chunk.js.map": "/exchange360/static/js/453.640a8f5e.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5848fadd.css",
+    "static/js/main.0a42d041.js"
+  ]
+}
