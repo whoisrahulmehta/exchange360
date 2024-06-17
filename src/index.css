@@ -1,0 +1,255 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.red {
+  color: red;
+}
+
+.content {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(45deg, rgb(152, 92, 122), purple, pink, lightgray);
+  background-position: 800% 600%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #efefef;
+}
+
+.app {
+  width: 60%;
+  height: 80vh;
+  background: rgba(255, 255, 255, 0.2);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+}
+
+.loader section {
+  animation: zoomout 4s ease 0s infinite forwards;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(45deg, rgb(152, 92, 122), purple, pink, lightgray);
+  color: white;
+  height: 100vh;
+}
+.loader section .underline {
+  color: gold;
+  height: 1vh;
+  border-top: 1px solid gold;
+}
+.loader section .icon {
+  color: gold;
+  margin: 0px 10px;
+}
+.loader section .icon:hover {
+  color: white;
+}
+.loader section .nameApp:hover {
+  color: gold;
+}
+.loader section .nameApp:hover span {
+  color: white;
+}
+.loader section .nameApp span {
+  color: gold;
+}
+
+@keyframes zoomout {
+  0% {
+    font-size: 1rem;
+    opacity: 1;
+  }
+  100% {
+    font-size: 4rem;
+    opactiy: 0.025;
+  }
+}
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+nav p {
+  padding: 0 10px;
+  font-size: 2.5rem;
+}
+nav p:hover {
+  color: gold;
+}
+
+h1 {
+  color: #efefef;
+  text-align: right;
+  padding: 10px;
+  font-size: 1.9rem;
+}
+h1 span {
+  margin-right: 10px;
+  color: gold;
+  /*     transform: translateY(-100px); */
+}
+h1:hover {
+  color: gold;
+}
+h1:hover::after, h1:hover::before {
+  color: gold;
+}
+h1:hover span {
+  color: white;
+}
+h1::after {
+  content: "|";
+  margin: 0 2px;
+  color: black;
+}
+h1::before {
+  content: "|";
+  margin: 0 2px;
+  color: black;
+}
+
+.flagger {
+  margin: auto auto;
+  text-align: center;
+  font-size: 1.2rem;
+  height: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+input {
+  border: 0;
+  height: 15px;
+  width: 50%;
+  background: transparent;
+  border-bottom: 1px solid white;
+  transition: all ease 0.4s;
+  color: #efefef;
+  text-align: center;
+  /*     border-width:10px; */
+  /*     margin: 5px auto; */
+}
+input:active {
+  outline: 0;
+  border: 0;
+}
+input::-moz-placeholder {
+  color: #efefef;
+  text-align: center;
+}
+input::placeholder {
+  color: #efefef;
+  text-align: center;
+}
+input:hover {
+  width: 90%;
+  outline: 0;
+}
+input:hover::-moz-placeholder {
+  font-size: 0.8rem;
+}
+input:hover::placeholder {
+  font-size: 0.8rem;
+}
+input:visited {
+  outline: 0;
+  border: 0;
+}
+
+.result {
+  text-align: center;
+}
+.result p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.el {
+  margin: 20px 0 0 0;
+  width: 100%;
+  text-align: center;
+}
+
+select {
+  width: 50%;
+  border: 1px solid white;
+  margin: 40px 0;
+  background: transparent;
+  border-radius: 20px;
+}
+
+.sub {
+  display: flex;
+  width: 100%;
+  padding: 12px;
+  flex-direction: row;
+}
+
+.btn {
+  text-transform: capitalize;
+  font-size: 1rem;
+  color: white;
+  margin: 0 auto;
+  width: 40%;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  background: transparent;
+}
+.btn:hover {
+  background-color: white;
+  color: pink;
+}
+
+@media screen and (max-width: 780px) {
+  .content,
+  .app {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background-color: transparent;
+    height: 100vh;
+  }
+  h1 {
+    font-size: 2.4rem;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  h1 span {
+    margin: 10px 0;
+  }
+  h1::after, h1::before {
+    content: "";
+    display: none;
+  }
+  input {
+    font-size: 18px;
+    height: 10vh;
+    width: 90%;
+  }
+  input::-moz-placeholder {
+    font-size: 18px;
+  }
+  input::placeholder {
+    font-size: 18px;
+  }
+  .flagger {
+    flex-direction: column;
+  }
+  .sub {
+    flex-direction: column;
+  }
+  nav {
+    flex-direction: column;
+  }
+  nav h1 {
+    display: block;
+  }
+}/*# sourceMappingURL=index.css.map */

@@ -1,0 +1,247 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.red{
+  color:red;  
+}
+.content {
+  width: 100%;
+  height: 100vh;
+  // background: linear-gradient(45deg, #efefef, rgba(255, 0, 157, 0.5), #efefef);
+  background: linear-gradient(45deg, rgb(152, 92, 122), purple, pink , lightgray);
+  background-position: 800% 600%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #efefef;
+}
+.app {
+  width: 60%;
+  height: 80vh;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+}
+.loader{
+  section{
+  animation: zoomout 4s ease 0s infinite forwards;
+ display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(45deg, rgb(152, 92, 122), purple, pink , lightgray);
+  color: white;
+  height: 100vh;
+  .underline{
+    color: gold;
+    height: 1vh;
+
+    border-top: 1px solid gold;
+    
+  }
+  .icon{
+    color: gold;;
+    margin: 0px 10px;
+    &:hover{
+      color: white;
+    }
+  }
+  .nameApp{
+    
+    &:hover{
+      color: gold;
+      span{
+        color: white;
+        // transform: scale(1.2);
+      }
+    }
+    span{
+      color: gold;
+    }
+  }
+}
+}
+@keyframes zoomout{
+  0%{
+    font-size: 1rem;
+    opacity: 1;
+  }
+  100%{
+    font-size:4rem;
+    opactiy: 0.025;
+  }
+}
+
+nav{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+ 
+  p{
+    padding:0  10px;
+    font-size: 2.5rem;
+    &:hover{
+      color:gold;
+    }
+  }
+}
+h1 {
+  color: #efefef;
+  text-align: right;
+  padding: 10px;
+  font-size: 1.9rem;
+  span {
+    margin-right: 10px;
+    color: gold;
+    /*     transform: translateY(-100px); */
+  }
+  &:hover {
+    color: gold;
+    &::after,
+    &::before {
+      color: gold;
+    }
+    span {
+      color: white;
+    }
+  }
+  &::after {
+    content: "|";
+    margin: 0 2px;
+    color: black;
+  }
+  &::before {
+    content: "|";
+    margin: 0 2px;
+    color: black;
+  }
+}
+.flagger {
+  margin: auto auto;
+  text-align: center;
+  font-size: 1.2rem;
+  height: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+input {
+  border: 0;
+  height: 15px;
+  width: 50%;
+  background: transparent;
+  border-bottom: 1px solid white;
+  transition: all ease 0.4s;
+  color: #efefef;
+  text-align: center;
+  /*     border-width:10px; */
+  /*     margin: 5px auto; */
+  &:active {
+    outline: 0;
+    border: 0;
+  }
+  &::placeholder {
+    color: #efefef;
+    text-align: center;
+  }
+  &:hover {
+    width: 90%;
+    outline: 0;
+    &::placeholder {
+      font-size: 0.8rem;
+    }
+  }
+
+  &:visited {
+    outline: 0;
+    border: 0;
+  }
+}
+
+.result {
+  text-align: center;
+  p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.el {
+  margin: 20px 0 0 0;
+  width: 100%;
+  text-align: center;
+}
+select {
+  width: 50%;
+  border: 1px solid white;
+  margin: 40px 0;
+  background: transparent;
+  border-radius: 20px;
+}
+.sub {
+  display: flex;
+  width: 100%;
+  padding: 12px;
+  flex-direction: row;
+}
+.btn {
+  text-transform: capitalize;
+  font-size: 1rem;
+  color: white;
+  margin: 0 auto;
+  width: 40%;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  background: transparent;
+  &:hover {
+    background-color: white;
+    color: pink;
+  }
+}
+
+@media screen and (max-width: 780px) {
+  .content,
+  .app {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background-color: transparent;
+    height: 100vh;
+  }
+  h1 {
+    font-size: 2.4rem;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    span {
+      margin: 10px 0;
+    }
+    &::after,
+    &::before {
+      content: "";
+      display: none;
+    }
+  }
+  input {
+    font-size: 18px;
+    height: 10vh;
+    width: 90%;
+    &::placeholder {
+      font-size: 18px;
+    }
+  }
+  .flagger {
+    flex-direction: column;
+  }
+  .sub{
+    flex-direction: column;
+  }
+  nav{
+    flex-direction: column;
+    h1{
+      display: block;
+    }
+  }
+}
